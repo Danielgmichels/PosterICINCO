@@ -1,0 +1,274 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nty/global//global/global/global}
+    \entry{opencv_library}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=7cb92723a011baf2e0abeeb403d03960}{%
+           family={Bradski},
+           familyi={B\bibinitperiod},
+           given={G.},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{7cb92723a011baf2e0abeeb403d03960}
+      \strng{fullhash}{7cb92723a011baf2e0abeeb403d03960}
+      \strng{fullhashraw}{7cb92723a011baf2e0abeeb403d03960}
+      \strng{bibnamehash}{7cb92723a011baf2e0abeeb403d03960}
+      \strng{authorbibnamehash}{7cb92723a011baf2e0abeeb403d03960}
+      \strng{authornamehash}{7cb92723a011baf2e0abeeb403d03960}
+      \strng{authorfullhash}{7cb92723a011baf2e0abeeb403d03960}
+      \strng{authorfullhashraw}{7cb92723a011baf2e0abeeb403d03960}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Dr. Dobb's Journal of Software Tools}
+      \field{title}{{The OpenCV Library}}
+      \field{year}{2025}
+    \endentry
+    \entry{mediapipe}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=8b36e9207c24c76e6719268e49201d94}{%
+           family={Google},
+           familyi={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{fullhash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{fullhashraw}{8b36e9207c24c76e6719268e49201d94}
+      \strng{bibnamehash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{authorbibnamehash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{authornamehash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{authorfullhash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{authorfullhashraw}{8b36e9207c24c76e6719268e49201d94}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{MediaPipe: A Framework for Building Perception Pipelines}
+      \field{year}{2025}
+      \verb{urlraw}
+      \verb https://mediapipe.dev/
+      \endverb
+      \verb{url}
+      \verb https://mediapipe.dev/
+      \endverb
+      \warn{\item misc entry 'mediapipe' (utfpr-poster.bib): Invalid format '09/12/2025' of date field 'urldate' - ignoring}
+    \endentry
+    \entry{martinelli2020human}{inproceedings}{}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=beccce58c44998b5270ab70ab620089b}{%
+           family={Martinelli},
+           familyi={M\bibinitperiod},
+           given={Dieisson},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=429eba7310c2cc59d909b2a62c648363}{%
+           family={Cerbaro},
+           familyi={C\bibinitperiod},
+           given={Jonathan},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9a28b6691fbe4fdf5b71b4124018e4bb}{%
+           family={Fabro},
+           familyi={F\bibinitperiod},
+           given={João\bibnamedelima Alberto},
+           giveni={J\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2c3a603e249f35ed3c5fca172f5a0d06}{%
+           family={Oliveira},
+           familyi={O\bibinitperiod},
+           given={Andre\bibnamedelima Schneider},
+           giveni={A\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=0,
+           prefix={de},
+           prefixi={d\bibinitperiod},
+           prefixun=0}}%
+        {{un=0,uniquepart=base,hash=b2685b5da83959126ce440d177b1f7a2}{%
+           family={Teixeira},
+           familyi={T\bibinitperiod},
+           given={Marco\bibnamedelimb Antonio\bibnamedelima Simoes},
+           giveni={M\bibinitperiod\bibinitdelim A\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{organization}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{4b239a65e14329b83a98b3b6a6213c39}
+      \strng{fullhash}{774f769f39d8bf627774c9e7408a1e28}
+      \strng{fullhashraw}{774f769f39d8bf627774c9e7408a1e28}
+      \strng{bibnamehash}{4b239a65e14329b83a98b3b6a6213c39}
+      \strng{authorbibnamehash}{4b239a65e14329b83a98b3b6a6213c39}
+      \strng{authornamehash}{4b239a65e14329b83a98b3b6a6213c39}
+      \strng{authorfullhash}{774f769f39d8bf627774c9e7408a1e28}
+      \strng{authorfullhashraw}{774f769f39d8bf627774c9e7408a1e28}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2020 Latin American Robotics Symposium (LARS), 2020 Brazilian Symposium on Robotics (SBR) and 2020 Workshop on Robotics in Education (WRE)}
+      \field{title}{Human-robot interface for remote control via iot communication using deep learning techniques for motion recognition}
+      \field{year}{2020}
+      \field{pages}{1\bibrangedash 6}
+      \range{pages}{6}
+    \endentry
+    \entry{moniruzzaman2022teleoperation}{article}{}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=900f132f7bb9f2960eabbfb069a485fa}{%
+           family={Moniruzzaman},
+           familyi={M\bibinitperiod},
+           given={MD},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e74bd0e88080affaddbe61018a6398d1}{%
+           family={Rassau},
+           familyi={R\bibinitperiod},
+           given={Alexander},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=65c60bcb153a7e10cdc11f96f1bb7330}{%
+           family={Chai},
+           familyi={C\bibinitperiod},
+           given={Douglas},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3ee8e8e5547e93d9903b670f2d7b2e45}{%
+           family={Islam},
+           familyi={I\bibinitperiod},
+           given={Syed\bibnamedelimb Mohammed\bibnamedelima Shamsul},
+           giveni={S\bibinitperiod\bibinitdelim M\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{70c535a1e87f67850fc26210000e1486}
+      \strng{fullhash}{5c7b35bf65095147f7bd2109a6b0c4a8}
+      \strng{fullhashraw}{5c7b35bf65095147f7bd2109a6b0c4a8}
+      \strng{bibnamehash}{70c535a1e87f67850fc26210000e1486}
+      \strng{authorbibnamehash}{70c535a1e87f67850fc26210000e1486}
+      \strng{authornamehash}{70c535a1e87f67850fc26210000e1486}
+      \strng{authorfullhash}{5c7b35bf65095147f7bd2109a6b0c4a8}
+      \strng{authorfullhashraw}{5c7b35bf65095147f7bd2109a6b0c4a8}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Robotics and Autonomous Systems}
+      \field{title}{Teleoperation methods and enhancement techniques for mobile robots: A comprehensive survey}
+      \field{volume}{150}
+      \field{year}{2022}
+      \field{pages}{103973}
+      \range{pages}{1}
+    \endentry
+    \entry{ros}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=ee129c16ea7bb397a736406a9ec55a1e}{%
+           family={{Open Source Robotics Foundation}},
+           familyi={O\bibinitperiod}}}%
+      }
+      \strng{namehash}{ee129c16ea7bb397a736406a9ec55a1e}
+      \strng{fullhash}{ee129c16ea7bb397a736406a9ec55a1e}
+      \strng{fullhashraw}{ee129c16ea7bb397a736406a9ec55a1e}
+      \strng{bibnamehash}{ee129c16ea7bb397a736406a9ec55a1e}
+      \strng{authorbibnamehash}{ee129c16ea7bb397a736406a9ec55a1e}
+      \strng{authornamehash}{ee129c16ea7bb397a736406a9ec55a1e}
+      \strng{authorfullhash}{ee129c16ea7bb397a736406a9ec55a1e}
+      \strng{authorfullhashraw}{ee129c16ea7bb397a736406a9ec55a1e}
+      \field{sortinit}{O}
+      \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Robotic Operating System (ROS)}
+      \field{year}{2025}
+      \verb{urlraw}
+      \verb https://www.ros.org/
+      \endverb
+      \verb{url}
+      \verb https://www.ros.org/
+      \endverb
+      \warn{\item misc entry 'ros' (utfpr-poster.bib): Invalid format '09/12/2025' of date field 'urldate' - ignoring}
+    \endentry
+    \entry{zick2024teleoperation}{article}{}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=0c1f26493965a04ed3d20fc3f2d3c8de}{%
+           family={Zick},
+           familyi={Z\bibinitperiod},
+           given={Lucas\bibnamedelima Alexandre},
+           giveni={L\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=beccce58c44998b5270ab70ab620089b}{%
+           family={Martinelli},
+           familyi={M\bibinitperiod},
+           given={Dieisson},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=fa0173f92381fcc70f8fef73a94ea7f0}{%
+           family={Schneider\bibnamedelimb de\bibnamedelima Oliveira},
+           familyi={S\bibinitperiod\bibinitdelim d\bibinitperiod\bibinitdelim O\bibinitperiod},
+           given={André},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c4c67c9f391d32bb13ece29fc32baad7}{%
+           family={Cremer\bibnamedelima Kalempa},
+           familyi={C\bibinitperiod\bibinitdelim K\bibinitperiod},
+           given={Vivian},
+           giveni={V\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Nature Publishing Group}%
+      }
+      \strng{namehash}{f47a7b24acff3df0651705009a658653}
+      \strng{fullhash}{dff0d5dc2aa8b947637fbd6d8b82e94f}
+      \strng{fullhashraw}{dff0d5dc2aa8b947637fbd6d8b82e94f}
+      \strng{bibnamehash}{f47a7b24acff3df0651705009a658653}
+      \strng{authorbibnamehash}{f47a7b24acff3df0651705009a658653}
+      \strng{authornamehash}{f47a7b24acff3df0651705009a658653}
+      \strng{authorfullhash}{dff0d5dc2aa8b947637fbd6d8b82e94f}
+      \strng{authorfullhashraw}{dff0d5dc2aa8b947637fbd6d8b82e94f}
+      \field{sortinit}{Z}
+      \field{sortinithash}{96892c0b0a36bb8557c40c49813d48b3}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Scientific Reports}
+      \field{number}{1}
+      \field{title}{Teleoperation system for multiple robots with intuitive hand recognition interface}
+      \field{volume}{14}
+      \field{year}{2024}
+      \field{pages}{1\bibrangedash 11}
+      \range{pages}{11}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+
