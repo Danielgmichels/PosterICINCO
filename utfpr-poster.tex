@@ -30,7 +30,7 @@
 %% Pacotes utilizados
 \usepackage[%% Opções: [>] passada para beamerposter
   Times   = false,%% Fontes Times (roman) e Arial (sans serif): true ou false
-  BibURLs = false,%% Links de URLs nas referências: true ou false
+  BibURLs = true,%% Links de URLs nas referências: true ou false
   ABNTNum = none,%% Estilo numérico ABNT: none (AUTOR, ANO), dflt (1) e brkt [1]
   size    = custom,%% Tamanho de papel: a0, a1, a2, a3, a4 e custom [>]
   width   = 90,%% Largura de papel em centímetros (custom) [>]
@@ -89,11 +89,9 @@
 %
 \begin{column}{0.1\textwidth}
 \begin{flushleft}
-\includegraphics[width = \columnwidth]{./Logos/logo_ICINCO_2}%% Logomarca superior-esquerdo
+\includegraphics[width = \columnwidth]{./Logos/logo_ICINCO_2025}%% Logomarca superior-esquerdo
 \vspace*{0.5\baselineskip}
 \includegraphics[width = \columnwidth]{./Logos/logo_INSTICC_2}%% Logomarca inferior-esquerdo
-\vspace*{0.5\baselineskip}
-\includegraphics[width = \columnwidth]{./Logos/inesc}%% Logomarca inferior-esquerdo
 \end{flushleft}
 \end{column}
 %
@@ -105,9 +103,7 @@
 \begin{flushright}
 \includegraphics[width = \columnwidth]{./Logos/logo_utfpr}%% Logomarca superior-direito
 \vspace*{0.5\baselineskip}
-\includegraphics[width = \columnwidth]{./Logos/logo_IPB_2}%% Logomarca inferior-direito
-\vspace*{0.5\baselineskip}
-\includegraphics[width = \columnwidth]{./Logos/cedri}%% Logomarca
+\includegraphics[width = \columnwidth]{./Logos/logo_planalto_norte.png}%% Logomarca inferior-direito
 %\vspace*{0.5\baselineskip}
 %\includegraphics[width = \columnwidth]{./Logos/logo_IPB_2}%% Logomarca
 % \vspace*{0.5\baselineskip}
@@ -126,13 +122,12 @@
 \begin{block}{INTRODUCTION}
 Current teleoperation methods often rely on physical devices like joysticks or data gloves \cite{zick2024teleoperation,martinelli2020human}, but are frequently limited by high cost, complexity, and a lack of intuitive control, hindering their widespread adoption \cite{moniruzzaman2022teleoperation}.
 
-
 To overcome these shortcomings, this paper proposes an innovative control method for articulated robotic arms. The proposed method utilizes real-time recognition of the user's hand position and movements using a single camera, as can be seen in Figure \ref{fig:uso_do_sistema}.
 
 \vspace{-0.15cm}
 \begin{figure}[!htb]
     \centering
-    \includegraphics[scale=0.12]{Figuras/hand_and_robot.jpeg}
+    \includegraphics[scale=0.15]{Figuras/hand_and_robot.jpeg}
     \caption{System usage.}
     \label{fig:uso_do_sistema}
 \end{figure}
@@ -140,52 +135,52 @@ To overcome these shortcomings, this paper proposes an innovative control method
 A distinctive feature of our system is its ability to store and reproduce movement sequences, which greatly simplifies the automation of repetitive tasks by enabling "Programming by Demonstration".
 
 \end{block}
-%
+% 
 % \begin{block}{RELATED WORK}
 
 % Existing research in robotic teleoperation has explored advanced interfaces, including multi-robot control systems, deep learning for motion recognition, and immersive virtual reality environments \cite{zick2024teleoperation, martinelli2020human, franzluebbers2019remote}. While powerful, these approaches often require specialized hardware or complex implementations. In contrast, this work presents a low-cost and accessible alternative by leveraging a single RGB camera with the MediaPipe library. Our key contribution is the integration of a 'Programming by Demonstration' feature, enabling intuitive task automation without additional sensors.
 
 % \end{block}
+
+
+\begin{block}{EXPERIMENTAL VALIDATION}
+To evaluate the system's effectiveness, precision, and repeatability, we designed a "pick and place" test, simulating a common industrial task. The experiment required the robotic arm to pick up a 4 cm cube from a platform elevated by 13 cm and place it on a ground-level surface approximately 30 cm away. An operator first demonstrated the task once using hand gestures, which the system recorded. Subsequently, the system was commanded to autonomously execute the stored movement for 50 consecutive cycles, during which the number of successful attempts and the time per cycle were logged for analysis. A demonstration video of the test is available at:
+
+\begin{figure}[htbp]
+    \centering
+    % Certifique-se que o nome do arquivo 'grafico_tempos.png' corresponde ao seu arquivo de imagem
+    \includegraphics[width=.2\columnwidth]{Figuras/QR_Code.png} 
+    \caption{A demonstration video of pick and place test.}
+    \label{fig:qrcode}
+\end{figure}
+
+\end{block}
+
+\begin{block}{CONCLUSION}
+This work validated a viable and effective solution for intuitive robotic programming, successfully bridging the gap between human intention and robotic execution. The high success rate (98\%) and consistency in cycle time (0.0126s standard deviation) empirically confirm the system's robustness, precision, and repeatability. We demonstrate that a low-cost, camera-based approach can significantly reduce the complexity of traditional robotic programming, making automation more accessible. Future work will focus on implementing conditional logic based on gestures and abstracting the software to ensure portability across different robot models.
+
+\end{block}
+
+%
+%
+%
 %
 \end{column}
 %
-\begin{column}{0.49\textwidth}
-%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{column}{.49\textwidth}
+% 
 \begin{block}{PROPOSED STRATEGY}
 
 Our system's architecture comprises three modules: Gesture Capture, Robot Command Mapping, and Trajectory Recording. The high-level control logic was implemented in Python, using an Interbotix PincherX-100 robotic arm controlled via the Robot Operating System (ROS) \cite{ros}. Real-time gesture capture is achieved with a standard camera and the MediaPipe library \cite{mediapipe}, which tracks 21 3D hand landmarks. The hand's position is mapped to the robot's base and elbow joints, while a calculated depth variable controls the shoulder's reach. The gripper is actuated by the distance between the thumb and index fingertips. This intuitive control, facilitated by OpenCV \cite{opencv_library} for image processing and the \texttt{interbotix\_xs\_modules} library for arm communication, is enhanced by a programming module that allows the operator to Record (\texttt{'R'}), Play (\texttt{'P'}), and Loop (\texttt{'L'}) a demonstrated trajectory.
 
-% , as can be seen in figure \ref{fig:fluxograma}.
-
-% \vspace{-0.15cm}
-% \begin{figure}[!htb]
-%     \centering
-%     \includegraphics[scale=0.17]{Figuras/Fluxograma.png}
-%     \caption{System flowchart.}
-%     \label{fig:fluxograma}
-% \end{figure}
-
 \end{block}
-%
-\begin{block}{EXPERIMENTAL VALIDATION}
-To evaluate the system's effectiveness, precision, and repeatability, we designed a "pick and place" test, simulating a common industrial task. The experiment required the robotic arm to pick up a 4 cm cube from a platform elevated by 13 cm and place it on a ground-level surface approximately 30 cm away. An operator first demonstrated the task once using hand gestures, which the system recorded. Subsequently, the system was commanded to autonomously execute the stored movement for 50 consecutive cycles, during which the number of successful attempts and the time per cycle were logged for analysis.\footnote{A demonstration video of the test is available at: \url{https://www.youtube.com/watch?v=Zf2bXpjEzRs}}
-
-\end{block}
-%
-\end{column}
-%
-\end{columns}
-
-\begin{columns}[t, onlytextwidth]
-%
-\begin{column}{\textwidth}
 %
 \begin{block}{RESULTS}
-The system demonstrated high robustness and effectiveness, achieving a 98\% success rate, with 49 out of 50 trials completed successfully presented in Table\ref{tab:pick_place_results}. The quantitative analysis also confirmed the excellent precision and repeatability of the method. The mean cycle time was 13.35 seconds, with a very low standard deviation of only 0.0126 seconds. The execution time remained remarkably stable across all 50 repetitions, indicating no performance degradation over time and confirming the system's reliability for repetitive tasks detailed in Figure\ref{fig:execution_times}.
-
+The system demonstrated high robustness and effectiveness, achieving a 98\% success rate, with 49 out of 50 trials completed successfully presented in Table\ref{tab:pick_place_results}. The quantitative analysis also confirmed the excellent precision and repeatability of the method. The mean cycle time was 13.35 seconds, with a very low standard deviation of only 0.0126 seconds. The execution time remained remarkably stable across all 50 repetitions, indicating no performance degradation over time and confirming the system's reliability for repetitive tasks.
 %The experiments’ evolution, as the system’s scalability was increased to observe possible variations in the system’s behavior, the position of the swarm throughout the experiment, and the potential field associated with the swarm’s initial position are illustrated by Figure 3. An other important result is presented in Figure 4 by the yellow% plane performed by the central robot for gas source localization. %Table \ref{tab:principais_resultados_exp2} contains the average values of the obtained results.
 
-\begin{column}[T]{0.49\textwidth}
+
 \begin{table}[h]
     \caption{"Pick and Place" Test Results (50 Repetitions)}
     \label{tab:pick_place_results}\centering
@@ -203,30 +198,20 @@ The system demonstrated high robustness and effectiveness, achieving a 98\% succ
         \hline
     \end{tabular}}
 \end{table}
-\end{column}
-\yellowvrule%
-\begin{column}[T]{0.49\textwidth}
-\begin{figure}[htbp]
-    \centering
-    % Certifique-se que o nome do arquivo 'grafico_tempos.png' corresponde ao seu arquivo de imagem
-    \includegraphics[width=.6\columnwidth]{Figuras/validation_graphic.png} 
-    \caption{Execution time per cycle for 50 trials, with the moving average in red.}
-    \label{fig:execution_times}
-\end{figure}
-\end{column}
+
+
+% \begin{figure}[htbp]
+%     \centering
+%     % Certifique-se que o nome do arquivo 'grafico_tempos.png' corresponde ao seu arquivo de imagem
+%     \includegraphics[width=.7\columnwidth]{Figuras/validation_graphic.png} 
+%     \caption{Execution time per cycle for 50 trials, with the moving average in red.}
+%     \label{fig:execution_times}
+% \end{figure}
+
 \end{block}
 %
-\end{column}
-%
-\end{columns}
-
-\begin{columns}[t, onlytextwidth]
-%
-\begin{column}{0.49\textwidth}
-%
-\begin{block}{CONCLUSION}
-This work validated a viable and effective solution for intuitive robotic programming, successfully bridging the gap between human intention and robotic execution. The high success rate (98\%) and consistency in cycle time (0.0126s standard deviation) empirically confirm the system's robustness, precision, and repeatability. We demonstrate that a low-cost, camera-based approach can significantly reduce the complexity of traditional robotic programming, making automation more accessible. Future work will focus on implementing conditional logic based on gestures and abstracting the software to ensure portability across different robot models.
-
+\begin{block}{REFERENCES}
+  \printbibliography[heading = none]
 \end{block}
 %
 \begin{block}{ACKNOWLEDGEMENTS}
@@ -244,18 +229,14 @@ The funding organizations, for the support received for the development of this 
 \includegraphics[height = 20mm]{./Logos/seti}
 \hspace*{5mm}
 \includegraphics[height = 20mm]{./Logos/utfpr}
+\hspace*{5mm}
+\includegraphics[height = 20mm]{./Logos/napi_robotica.png}
+\hspace*{5mm}
+\includegraphics[height = 20mm]{./Logos/logo_UDESC_vertical.png}
 \end{block}
 %
+
 \end{column}
-%
-\begin{column}{0.49\textwidth}
-%
-\begin{block}{REFERENCES}
-\printbibliography[heading = none]
-\end{block}
-%
-\end{column}
-%
 \end{columns}
 
 \vspace*{\stretch{1000}}
